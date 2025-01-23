@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include "header.html" %}
+<body>
+ <main class="container">
+        <section class="about-section">
+            <h2>Welcome to Gampdf – Your Gateway to Free Knowledge!</h2>
+            <p>At Gampdf, we believe in the power of knowledge and the freedom to access it. Our mission is to provide a platform where anyone, anywhere can download high-quality PDF books for free. Whether you're a student, a professional, or an avid reader, Gampdf is here to support your learning journey and ignite your passion for reading.</p>
+            <img src="static/images/wel.webp" alt="Gampdf Welcome Image" class="about-image">
+        </section>
+
+        <section class="vision-section">
+            <h2>Our Vision</h2>
+            <p>We envision a world where information is universally accessible, and learning opportunities are limitless. Gampdf is dedicated to breaking down barriers to education and providing a resourceful hub for lifelong learners.</p>
+            <img src="static/images/mis.webp" alt="Vision Image" class="about-image">
+        </section>
+
+        <section class="offer-section">
+            <h2>What We Offer</h2>
+            <ul>
+                <li><strong>Extensive Collection:</strong> From academic textbooks to novels, our growing library caters to a wide range of interests and disciplines.</li>
+                <li><strong>Easy Access:</strong> No complicated procedures or hidden fees—just browse, select, and download your favorite books in PDF format.</li>
+                <li><strong>User-Friendly Experience:</strong> Our platform is designed with simplicity in mind, ensuring a seamless browsing and downloading experience across all devices.</li>
+            </ul>
+            <img src="static/images/off.webp" alt="Offer Image" class="about-image">
+        </section>
+
+        <section class="why-choose-section">
+            <h2>Why Choose Gampdf?</h2>
+            <ul>
+                <li><strong>Completely Free:</strong> We are committed to offering all our resources at no cost, making learning accessible to everyone.</li>
+                <li><strong>Diverse Categories:</strong> Explore a wide array of genres, including science, technology, literature, history, and more.</li>
+                <li><strong>Community-Centered:</strong> Gampdf is built for readers, by readers. We value feedback and suggestions from our users to continuously improve our platform.</li>
+            </ul>
+            <img src="static/images/y.webp" width="1020" alt="Why Choose Us Image" class="about-image">
+        </section>
+
+        <section class="community-section">
+            <h2>Join Our Community</h2>
+            <p>Be a part of the Gampdf community and take advantage of the vast resources available at your fingertips. Stay updated with the latest additions, featured books, and community events by subscribing to our newsletter and following us on social media.</p>
+            <img src="static/images/j.webp" width="1020" alt="Community Image" class="about-image">
+        </section>
+
+        <section class="contact-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, suggestions, or want to contribute to our platform, feel free to reach out via our <a href="{{ url_for('contact') }} ">Contact Us Now.</a>.</p>
+        </section>
+     <p><strong>Thank you for choosing Gampdf!</strong></p>
+    </main>
+    {% include "footer.html" %}
+</body>
+</html>
