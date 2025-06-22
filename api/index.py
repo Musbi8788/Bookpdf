@@ -3,10 +3,11 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import UserMixin, login_user, LoginManager, login_required, current_user, logout_user
 
+import os
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'musbi321@diedladkf'
+app.config['SECRET_KEY'] = os.environ.get("Secret_Key")
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -58,7 +59,7 @@ def register():
 
         # hashed a strong password for your users
         hashed_password = generate_password_hash(
-            request.form.get("password"),
+            request.form.get("password") or "",
             method='pbkdf2:sha256',
             salt_length=8)
         new_user = User (
@@ -81,7 +82,7 @@ def register():
 def login():
     if request.method == "POST":
         email = request.form.get("email")
-        password = request.form.get("password")
+        password = request.form.get("password") or ""
 
 
         #Find user by email entered.
